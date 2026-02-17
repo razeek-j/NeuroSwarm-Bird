@@ -37,9 +37,9 @@ def main():
 
     # 2. Create Outlet
     outlet = StreamOutlet(info)
-    print(f"✅ LSL Outlet created: {STREAM_NAME} ({STREAM_TYPE})")
-    print(f"   channels={CHANNEL_COUNT}, srate={NOMINAL_SRATE}Hz")
-    print("   Broadcasting now... Press Ctrl+C to stop.\n")
+    print(f"✅ LSL Outlet created: {STREAM_NAME} ({STREAM_TYPE})", flush=True)
+    print(f"   channels={CHANNEL_COUNT}, srate={NOMINAL_SRATE}Hz", flush=True)
+    print("   Broadcasting now... Press Ctrl+C to stop.\n", flush=True)
 
     start_time = time.time()
     last_print_time = 0
@@ -48,7 +48,7 @@ def main():
     is_relaxed = True
     next_toggle = time.time() + TOGGLE_INTERVAL
 
-    print(f"[{time.strftime('%H:%M:%S')}] Broadcasting: RELAXED (Alpha waves)")
+    print(f"[{time.strftime('%H:%M:%S')}] Broadcasting: RELAXED (Alpha waves)", flush=True)
 
     while True:
         now = time.time()
@@ -58,7 +58,7 @@ def main():
             is_relaxed = not is_relaxed
             next_toggle = now + TOGGLE_INTERVAL
             state_name = "RELAXED (Alpha waves)" if is_relaxed else "STRESSED (Noise)"
-            print(f"[{time.strftime('%H:%M:%S')}] Broadcasting: {state_name}")
+            print(f"[{time.strftime('%H:%M:%S')}] Broadcasting: {state_name}", flush=True)
 
         # Generate sample based on state
         sample = []
