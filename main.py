@@ -224,9 +224,9 @@ def main():
                 avg_val = sum(signal_buffer) / len(signal_buffer)
 
                 # Hysteresis Thresholding (Prevents edge flickering)
-                # > 1.0  => Trigger STRESSED
+                # > 0.9  => Trigger STRESSED (since mean moves from ~0.6 to 1.0)
                 # < 0.8  => Trigger RELAXED
-                if current_state == "RELAXED" and avg_val > 1.0:
+                if current_state == "RELAXED" and avg_val > 0.9:
                     current_state = "STRESSED"
                     print(f"🧠 State → STRESSED (avg={avg_val:.2f})", flush=True)
                 elif current_state == "STRESSED" and avg_val < 0.8:
