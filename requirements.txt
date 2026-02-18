@@ -1,2 +1,4 @@
 pygame>=2.6.0
 pylsl
+pandas
+numpy
