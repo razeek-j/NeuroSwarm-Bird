@@ -3,7 +3,7 @@
 ![Python Badge](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![License Badge](https://img.shields.io/badge/License-MIT-green)
 
-![NeuroSwarm Demo](demo.gif)
+![NeuroSwarm Demo](neuroswarm_demo.mov)
 
 ## Abstract
 Traditional Brain-Computer Interfaces (BCIs) visualize cognitive states using boring 2D line graphs or static charts. This fails to capture the fluid, dynamic, and organic nature of human emotion and thought. **NeuroSwarm** bridges affective computing and generative artificial life. It is a real-time visualization engine that translates raw brain activity into emergent swarm behavior. When biology directly drives artificial life, the simulation transcends static analysis and becomes a seamless reflection of cognitive presence.
