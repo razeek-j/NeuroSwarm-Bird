@@ -28,11 +28,15 @@ def main():
     try:
         print(f"📂 Loading {CSV_FILE}...")
         df = pd.read_csv(CSV_FILE)
+        # If timestamps column exists, drop it
+        if 'timestamps' in df.columns:
+            df = df.drop(columns=['timestamps'])
+            
         # Extract first 4 columns (assuming they are the EEG channels)
-        # If your CSV has headers, pandas handles them. 
-        # If there are timestamps, ensure they are NOT in the first 4 columns 
-        # or adjust the iloc range.
         data = df.iloc[:, :4].values
+        
+        # Scale data to match expected range in main.py graph and FFT (-2.0 to 2.0)
+        data = data / 100.0
         
         n_samples = len(data)
         print(f"✅ Loaded {n_samples} samples.")
