@@ -63,6 +63,14 @@ NeuroSwarmBird/
 
 NeuroSwarm operates via the Lab Streaming Layer (LSL). You must run the data producer script and the visualization consumer script concurrently.
 
+### 🎬 The Ultimate Video Recording Hub
+For the easiest and most cinematic presentation, run the interactive showcase script. It orchestrates the entire pipeline, boots up your selected brain data source, and launches the visualizer all in one command:
+
+```bash
+source .venv/bin/activate
+python showcase.py
+```
+
 ### Mode 1: Simulated Data (No Hardware/Data Required)
 This mode algorithmically toggles between Alpha waves (Sine) and Beta/Noise, pushing data for visual testing.
 
